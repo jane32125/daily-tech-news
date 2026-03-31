@@ -1,5 +1,8 @@
 name: Update News Website
 on:
+  push:
+    branches:
+      - main  # 只要 main 分支有變動（存檔），就立刻執行
   schedule:
     - cron: '0 0 * * *'
   workflow_dispatch:
