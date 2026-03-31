@@ -10,7 +10,7 @@ if hasattr(ssl, '_create_unverified_context'):
 feeds = {
     "TechNews 科技新報": "https://technews.tw/feed/",
     "TechCrunch": "https://techcrunch.com/feed/",
-    "泛科學": "https://pansci.asia/feed/"
+    "泛科學": "https://pansci.asia/feed/",
     "iThome": "https://www.ithome.com.tw/rss"
 }
 
