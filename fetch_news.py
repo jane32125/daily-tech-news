@@ -9,7 +9,7 @@ if hasattr(ssl, '_create_unverified_context'):
 # 設定新聞來源
 feeds = {
     "TechNews 科技新報": "https://technews.tw/feed/",
-    "TechCrunch": "https://techcrunch.com/tag/rss/",
+    "TechCrunch": "https://techcrunch.com/feed/",
     "泛科學": "https://pansci.asia/feed/"
 }
 
