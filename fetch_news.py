@@ -10,7 +10,7 @@ if hasattr(ssl, '_create_unverified_context'):
 feeds = {
     "TechNews 科技新報": "https://technews.tw/feed/",
     "TechCrunch": "https://techcrunch.com/tag/rss/",
-    "數位時代": "https://www.bnext.com.tw/rss"
+    "泛科學": "https://pansci.asia/archives/tag/rss"
 }
 
 def fetch_content():
