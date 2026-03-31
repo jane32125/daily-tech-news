@@ -1,291 +1,363 @@
 
-<!DOCTYPE html>
-<html lang="zh-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的科技新聞摘要</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
-        body { font-family: 'Noto Sans TC', sans-serif; background-color: #f8fafc; }
-        .news-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
-        .news-card:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
-    </style>
-</head>
-<body class="min-h-screen p-4 md:p-8">
-    <div class="max-w-3xl mx-auto">
-        <header class="mb-10 text-center">
-            <h1 class="text-3xl md:text-4xl font-bold text-slate-800 mb-2">🚀 每日科技新聞摘要</h1>
-            <p class="text-slate-500">最後更新：2026-03-31 16:15 (UTC+8)</p>
-        </header>
-        <div class="space-y-4">
-            
-                <div class="news-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded">TechNews 科技新報</span>
-                        <span class="text-slate-400 text-xs">Tue, 31 Mar 2026 08:14:03 +0000</span>
-                    </div>
-                    <a href="https://technews.tw/2026/03/31/copilot-cowork-is-available-via-the-frontier-program/" target="_blank" class="text-xl font-bold text-slate-800 hover:text-blue-600 transition-colors">
-                        Copilot Cowork 藉 Frontier 計畫上線，Critique 功能採雙模型分工
-                    </a>
-                    <p class="mt-2 text-slate-600 text-sm line-clamp-2">
-                        微軟本月將 Claude Cowork 背後技術整合至 Microsoft 365 Copilot 當中，30 [&#8230;]...
-                    </p>
+    <!DOCTYPE html>
+    <html lang="zh-TW">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>科技資訊監測站 PRO</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+TC:wght@400;700;900&display=swap');
+            body { font-family: 'Inter', 'Noto Sans TC', sans-serif; background-color: #f1f5f9; }
+            .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        </style>
+        <!-- 確保 Tailwind 動態顏色類別不被過濾 -->
+        <div class="hidden bg-blue-600 bg-green-600 bg-orange-600 bg-red-600 text-blue-600 text-green-600 text-orange-600 text-red-600"></div>
+    </head>
+    <body class="min-h-screen p-4 md:p-8">
+        <div class="max-w-[1600px] mx-auto">
+            <header class="flex flex-col lg:flex-row justify-between items-center mb-10 gap-6">
+                <div class="text-center lg:text-left">
+                    <h1 class="text-4xl font-black text-slate-900 tracking-tighter">TECH MONITOR <span class="text-blue-600 italic">DASHBOARD</span></h1>
+                    <p class="text-slate-500 font-medium">即時科技情報匯整系統</p>
                 </div>
-                
-                <div class="news-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded">TechNews 科技新報</span>
-                        <span class="text-slate-400 text-xs">Tue, 31 Mar 2026 08:10:45 +0000</span>
+                <div class="flex items-center gap-4 bg-white p-2 pl-6 rounded-full shadow-md border border-slate-200">
+                    <div class="flex flex-col items-end">
+                        <span class="text-[10px] text-slate-400 font-black uppercase tracking-widest">System Status: Online</span>
+                        <span class="text-slate-700 font-mono font-bold">2026-03-31 16:21 (UTC+8)</span>
                     </div>
-                    <a href="https://technews.tw/2026/03/31/virgin-galactic/" target="_blank" class="text-xl font-bold text-slate-800 hover:text-blue-600 transition-colors">
-                        維珍銀河 2026 年啟動商業太空服務，2027 年每月飛行 10 次
-                    </a>
-                    <p class="mt-2 text-slate-600 text-sm line-clamp-2">
-                        維珍銀河（Virgin Galactic）正全力以赴，計劃於 2026 年第四季啟動常規商業服務，這項里程碑標 [&#8230;]...
-                    </p>
-                </div>
-                
-                <div class="news-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded">TechNews 科技新報</span>
-                        <span class="text-slate-400 text-xs">Tue, 31 Mar 2026 08:03:16 +0000</span>
+                    <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center animate-pulse">
+                        <div class="w-4 h-4 bg-white rounded-full"></div>
                     </div>
-                    <a href="https://technews.tw/2026/03/31/samsung-galaxy-a57-a37-esim/" target="_blank" class="text-xl font-bold text-slate-800 hover:text-blue-600 transition-colors">
-                        瞄準 Android 熱銷榜！三星推 Galaxy A57、A37，AI 升級再加 eSIM
-                    </a>
-                    <p class="mt-2 text-slate-600 text-sm line-clamp-2">
-                        台灣三星稍早發表 Galaxy A 系列最新成員 Galaxy A57 5G 與 Galaxy A37 5G， [&#8230;]...
-                    </p>
                 </div>
-                
-                <div class="news-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded">TechNews 科技新報</span>
-                        <span class="text-slate-400 text-xs">Tue, 31 Mar 2026 08:00:35 +0000</span>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="flex flex-col h-full bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden"><div class="bg-blue-600 p-4 shadow-inner text-center font-black text-white tracking-widest uppercase">TechNews 科技新報</div><div class="p-4 flex-1 space-y-6 overflow-y-auto">
+                <div class="group flex flex-col space-y-2">
+                    <div class="overflow-hidden rounded-xl bg-slate-100 aspect-video">
+                        <img src="https://via.placeholder.com/400x225?text=No+Image" alt="thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/400x225?text=News'">
                     </div>
-                    <a href="https://technews.tw/2026/03/31/moonshot-ai-arr-surpasses-100-million/" target="_blank" class="text-xl font-bold text-slate-800 hover:text-blue-600 transition-colors">
-                        陸月之暗面 ARR 突破 1 億美元，估值料升至 180 億美元
-                    </a>
-                    <p class="mt-2 text-slate-600 text-sm line-clamp-2">
-                        綜合港媒及中媒報導，中國「AI 六小虎」之一的月之暗面（Moonshot AI）發布 Kimi K2.5 僅過 [&#8230;]...
-                    </p>
-                </div>
-                
-                <div class="news-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded">TechNews 科技新報</span>
-                        <span class="text-slate-400 text-xs">Tue, 31 Mar 2026 08:00:07 +0000</span>
+                    <div class="space-y-1">
+                        <a href="https://technews.tw/2026/03/31/copilot-cowork-is-available-via-the-frontier-program/" target="_blank" class="block text-slate-800 font-bold leading-snug hover:text-blue-600 transition-colors line-clamp-2">
+                            Copilot Cowork 藉 Frontier 計畫上線，Critique 功能採雙模型分工
+                        </a>
+                        <p class="text-slate-500 text-xs leading-relaxed">微軟本月將 Claude Cowork 背後技術整合至 Microsoft 365 Cop...</p>
                     </div>
-                    <a href="https://technews.tw/2026/03/31/samsung-expects-to-mass-produce-1-nanometer-process-chips-in-2031/" target="_blank" class="text-xl font-bold text-slate-800 hover:text-blue-600 transition-colors">
-                        三星預定 2031 年量產 1 奈米，採叉狀片全新結構
-                    </a>
-                    <p class="mt-2 text-slate-600 text-sm line-clamp-2">
-                        為了在次世代半導體市場中搶佔主導地位，韓國三星的晶圓代工部門近期確立了技術藍圖，宣佈將於 2031 年正式量產 [&#8230;]...
-                    </p>
                 </div>
+                <hr class="border-slate-50">
                 
-                <div class="news-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded">TechCrunch</span>
-                        <span class="text-slate-400 text-xs">Tue, 31 Mar 2026 07:23:06 +0000</span>
+                <div class="group flex flex-col space-y-2">
+                    <div class="overflow-hidden rounded-xl bg-slate-100 aspect-video">
+                        <img src="https://via.placeholder.com/400x225?text=No+Image" alt="thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/400x225?text=News'">
                     </div>
-                    <a href="https://techcrunch.com/2026/03/31/the-silicon-valley-congressional-race-is-getting-ugly/" target="_blank" class="text-xl font-bold text-slate-800 hover:text-blue-600 transition-colors">
-                        The Silicon Valley congressional race is getting ugly
-                    </a>
-                    <p class="mt-2 text-slate-600 text-sm line-clamp-2">
-                        The primary isn&#8217;t until early June, but the CA-17 race between five-term incumbent Ro Khanna a...
-                    </p>
-                </div>
-                
-                <div class="news-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded">TechCrunch</span>
-                        <span class="text-slate-400 text-xs">Tue, 31 Mar 2026 05:30:20 +0000</span>
+                    <div class="space-y-1">
+                        <a href="https://technews.tw/2026/03/31/virgin-galactic/" target="_blank" class="block text-slate-800 font-bold leading-snug hover:text-blue-600 transition-colors line-clamp-2">
+                            維珍銀河 2026 年啟動商業太空服務，2027 年每月飛行 10 次
+                        </a>
+                        <p class="text-slate-500 text-xs leading-relaxed">維珍銀河（Virgin Galactic）正全力以赴，計劃於 2026 年第四季啟動常規商...</p>
                     </div>
-                    <a href="https://techcrunch.com/2026/03/30/allbirds-is-selling-for-39-million-it-raised-nearly-10-times-that-amount-in-its-ipo/" target="_blank" class="text-xl font-bold text-slate-800 hover:text-blue-600 transition-colors">
-                        Allbirds is selling for $39 million. It raised nearly 10 times that amount in its IPO.
-                    </a>
-                    <p class="mt-2 text-slate-600 text-sm line-clamp-2">
-                        The collapse of the brand, which was originally venture-backed and that went public in 2021,  has be...
-                    </p>
                 </div>
+                <hr class="border-slate-50">
                 
-                <div class="news-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded">TechCrunch</span>
-                        <span class="text-slate-400 text-xs">Mon, 30 Mar 2026 23:41:48 +0000</span>
+                <div class="group flex flex-col space-y-2">
+                    <div class="overflow-hidden rounded-xl bg-slate-100 aspect-video">
+                        <img src="https://via.placeholder.com/400x225?text=No+Image" alt="thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/400x225?text=News'">
                     </div>
-                    <a href="https://techcrunch.com/2026/03/30/ai-work-boss-supervisor-us-quinnipiac-poll/" target="_blank" class="text-xl font-bold text-slate-800 hover:text-blue-600 transition-colors">
-                        15% of Americans say they’d be willing to work for an AI boss, according to new poll
-                    </a>
-                    <p class="mt-2 text-slate-600 text-sm line-clamp-2">
-                        According to a Quinnipiac University poll, 15% of Americans say they'd be willing to have a job wher...
-                    </p>
-                </div>
-                
-                <div class="news-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded">TechCrunch</span>
-                        <span class="text-slate-400 text-xs">Mon, 30 Mar 2026 23:08:12 +0000</span>
+                    <div class="space-y-1">
+                        <a href="https://technews.tw/2026/03/31/samsung-galaxy-a57-a37-esim/" target="_blank" class="block text-slate-800 font-bold leading-snug hover:text-blue-600 transition-colors line-clamp-2">
+                            瞄準 Android 熱銷榜！三星推 Galaxy A57、A37，AI 升級再加 eSIM
+                        </a>
+                        <p class="text-slate-500 text-xs leading-relaxed">台灣三星稍早發表 Galaxy A 系列最新成員 Galaxy A57 5G 與 Gala...</p>
                     </div>
-                    <a href="https://techcrunch.com/2026/03/30/popular-ai-gateway-startup-litellm-ditches-controversial-startup-delve/" target="_blank" class="text-xl font-bold text-slate-800 hover:text-blue-600 transition-colors">
-                        Popular AI gateway startup LiteLLM ditches controversial startup Delve
-                    </a>
-                    <p class="mt-2 text-slate-600 text-sm line-clamp-2">
-                        LiteLLM had obtained two security compliance certifications via Delve and fell victim to some horrif...
-                    </p>
                 </div>
+                <hr class="border-slate-50">
                 
-                <div class="news-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded">TechCrunch</span>
-                        <span class="text-slate-400 text-xs">Mon, 30 Mar 2026 21:53:09 +0000</span>
+                <div class="group flex flex-col space-y-2">
+                    <div class="overflow-hidden rounded-xl bg-slate-100 aspect-video">
+                        <img src="https://via.placeholder.com/400x225?text=No+Image" alt="thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/400x225?text=News'">
                     </div>
-                    <a href="https://techcrunch.com/2026/03/30/former-coatue-partner-raises-huge-65m-seed-for-enterprise-ai-agent-startup/" target="_blank" class="text-xl font-bold text-slate-800 hover:text-blue-600 transition-colors">
-                        Former Coatue partner raises huge $65M seed for enterprise AI agent startup
-                    </a>
-                    <p class="mt-2 text-slate-600 text-sm line-clamp-2">
-                        A few things turned investors' heads and drew them to participate in such a big round out of the gat...
-                    </p>
-                </div>
-                
-                <div class="news-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded">泛科學</span>
-                        <span class="text-slate-400 text-xs">Tue, 31 Mar 2026 05:28:48 +0000</span>
+                    <div class="space-y-1">
+                        <a href="https://technews.tw/2026/03/31/moonshot-ai-arr-surpasses-100-million/" target="_blank" class="block text-slate-800 font-bold leading-snug hover:text-blue-600 transition-colors line-clamp-2">
+                            陸月之暗面 ARR 突破 1 億美元，估值料升至 180 億美元
+                        </a>
+                        <p class="text-slate-500 text-xs leading-relaxed">綜合港媒及中媒報導，中國「AI 六小虎」之一的月之暗面（Moonshot AI）發布 Ki...</p>
                     </div>
-                    <a href="https://pansci.asia/archives/380859" target="_blank" class="text-xl font-bold text-slate-800 hover:text-blue-600 transition-colors">
-                        春季流感別當小感冒！高燒不退恐重症，專家示警：吃錯藥當心養出「超級細菌」
-                    </a>
-                    <p class="mt-2 text-slate-600 text-sm line-clamp-2">
-                        春季流感別當小感冒！若有持續高燒、呼吸困難等重症警訊應盡速就醫。專家提醒，流感需以抗病毒藥物治療，誤用抗生素不僅無效，更恐養出超級細菌，正確用藥才能遠離威脅。...
-                    </p>
                 </div>
+                <hr class="border-slate-50">
                 
-                <div class="news-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded">泛科學</span>
-                        <span class="text-slate-400 text-xs">Mon, 30 Mar 2026 08:32:16 +0000</span>
+                <div class="group flex flex-col space-y-2">
+                    <div class="overflow-hidden rounded-xl bg-slate-100 aspect-video">
+                        <img src="https://via.placeholder.com/400x225?text=No+Image" alt="thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/400x225?text=News'">
                     </div>
-                    <a href="https://pansci.asia/archives/381021" target="_blank" class="text-xl font-bold text-slate-800 hover:text-blue-600 transition-colors">
-                        這不只是一場比賽，更是一個讓想法化為行動的機會
-                    </a>
-                    <p class="mt-2 text-slate-600 text-sm line-clamp-2">
-                        本文為 新北市青年局 廣告 從 NPO 題目出發，學生如何把提案帶進真實世界 如果一個比賽，不只是比創意，而是...
-                    </p>
-                </div>
-                
-                <div class="news-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded">泛科學</span>
-                        <span class="text-slate-400 text-xs">Mon, 30 Mar 2026 02:02:21 +0000</span>
+                    <div class="space-y-1">
+                        <a href="https://technews.tw/2026/03/31/samsung-expects-to-mass-produce-1-nanometer-process-chips-in-2031/" target="_blank" class="block text-slate-800 font-bold leading-snug hover:text-blue-600 transition-colors line-clamp-2">
+                            三星預定 2031 年量產 1 奈米，採叉狀片全新結構
+                        </a>
+                        <p class="text-slate-500 text-xs leading-relaxed">為了在次世代半導體市場中搶佔主導地位，韓國三星的晶圓代工部門近期確立了技術藍圖，宣佈將於 ...</p>
                     </div>
-                    <a href="https://pansci.asia/archives/380835" target="_blank" class="text-xl font-bold text-slate-800 hover:text-blue-600 transition-colors">
-                        近視族福音？不動刀、無傷口的「飛秒振盪器」視力矯正技術走到哪了？【挺健康】
-                    </a>
-                    <p class="mt-2 text-slate-600 text-sm line-clamp-2">
-                        還記得 2018 年曾轟動一時的新聞嗎？當時各大媒體紛紛報導，美國哥倫比亞大學團隊研發出一項「不動刀」、「無傷口」且能「永久矯正」近視與遠視的神奇雷射技術。許多眼鏡族與隱形眼鏡重度使用者無不歡欣鼓舞，...
-                    </p>
                 </div>
+                <hr class="border-slate-50">
                 
-                <div class="news-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded">泛科學</span>
-                        <span class="text-slate-400 text-xs">Fri, 27 Mar 2026 02:01:23 +0000</span>
+                <div class="group flex flex-col space-y-2">
+                    <div class="overflow-hidden rounded-xl bg-slate-100 aspect-video">
+                        <img src="https://via.placeholder.com/400x225?text=No+Image" alt="thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/400x225?text=News'">
                     </div>
-                    <a href="https://pansci.asia/archives/380833" target="_blank" class="text-xl font-bold text-slate-800 hover:text-blue-600 transition-colors">
-                        半夜痛醒像踩到玻璃？20 到 40 歲痛風大爆發，未來 5 年新武器將顛覆治療！【挺健康】
-                    </a>
-                    <p class="mt-2 text-slate-600 text-sm line-clamp-2">
-                        你以為痛風是中年大叔的專利嗎？根據 2024 年最新的健保資料顯示，近年來 20 到 40 歲的痛風患者數量正急遽飆升。許多病患在診間常心有餘悸地向醫師抱怨：「那天半夜，棉被不過是輕輕碰到腳趾，我整個...
-                    </p>
-                </div>
-                
-                <div class="news-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded">泛科學</span>
-                        <span class="text-slate-400 text-xs">Thu, 26 Mar 2026 02:36:57 +0000</span>
+                    <div class="space-y-1">
+                        <a href="https://technews.tw/2026/03/31/centary-iron-and-steel/" target="_blank" class="block text-slate-800 font-bold leading-snug hover:text-blue-600 transition-colors line-clamp-2">
+                            世紀鋼擴產布局離岸風電，鎖定 3-3 區塊開發商機
+                        </a>
+                        <p class="text-slate-500 text-xs leading-relaxed">隨著企業導入 RE100、綠電需求快速升溫，世紀鋼財務長瞿生元表示，受限於政策與土地因素，...</p>
                     </div>
-                    <a href="https://pansci.asia/archives/380714" target="_blank" class="text-xl font-bold text-slate-800 hover:text-blue-600 transition-colors">
-                        手術前就開始免疫治療？局部晚期頭頸癌的新策略，讓治療目標從「延命」變成「治癒」
-                    </a>
-                    <p class="mt-2 text-slate-600 text-sm line-clamp-2">
-                        「圍手術期免疫治療」是局部晚期頭頸癌的治療趨勢，可望將治療目標從「延長存活」進一步調整為「治癒」！國際臨床研究已證實，圍手術期免疫治療有助降低復發風險，顯著延長存活期。...
-                    </p>
                 </div>
-                
-                <div class="news-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded">iThome</span>
-                        <span class="text-slate-400 text-xs">2026-03-31  03:03:34</span>
+                <hr class="border-slate-50">
+                </div></div><div class="flex flex-col h-full bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden"><div class="bg-green-600 p-4 shadow-inner text-center font-black text-white tracking-widest uppercase">TechCrunch</div><div class="p-4 flex-1 space-y-6 overflow-y-auto">
+                <div class="group flex flex-col space-y-2">
+                    <div class="overflow-hidden rounded-xl bg-slate-100 aspect-video">
+                        <img src="https://via.placeholder.com/400x225?text=No+Image" alt="thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/400x225?text=News'">
                     </div>
-                    <a href="https://www.ithome.com.tw/news/174801" target="_blank" class="text-xl font-bold text-slate-800 hover:text-blue-600 transition-colors">
-                        研究人員指Google Authenticator Passkey運作架構存在安全漏洞
-                    </a>
-                    <p class="mt-2 text-slate-600 text-sm line-clamp-2">
-                        資安廠商Palo Alto分析Google Authenticator的Passkey（通行密鑰）使用雲端、硬體裝置的混合架構，雖然省去硬體金鑰的麻煩，但他們認為卻衍生出可能讓攻擊者冒充裝置、接管Go...
-                    </p>
-                </div>
-                
-                <div class="news-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded">iThome</span>
-                        <span class="text-slate-400 text-xs">2026-03-31  02:03:01</span>
+                    <div class="space-y-1">
+                        <a href="https://techcrunch.com/2026/03/31/the-silicon-valley-congressional-race-is-getting-ugly/" target="_blank" class="block text-slate-800 font-bold leading-snug hover:text-green-600 transition-colors line-clamp-2">
+                            The Silicon Valley congressional race is getting ugly
+                        </a>
+                        <p class="text-slate-500 text-xs leading-relaxed">The primary isn&#8217;t until early June, but...</p>
                     </div>
-                    <a href="https://www.ithome.com.tw/news/174800" target="_blank" class="text-xl font-bold text-slate-800 hover:text-blue-600 transition-colors">
-                        Uber收購Blacklane，強化商務用車服務布局
-                    </a>
-                    <p class="mt-2 text-slate-600 text-sm line-clamp-2">
-                        德國禮賓車服務業者Blacklane與Uber週一（3/30）宣布雙方已達成收購協議，Uber將收購Blacklane，預計於2026年完成交易，但並未揭露交易金額。
-Blacklane成立於2011...
-                    </p>
                 </div>
+                <hr class="border-slate-50">
                 
-                <div class="news-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded">iThome</span>
-                        <span class="text-slate-400 text-xs">2026-03-31  02:03:44</span>
+                <div class="group flex flex-col space-y-2">
+                    <div class="overflow-hidden rounded-xl bg-slate-100 aspect-video">
+                        <img src="https://via.placeholder.com/400x225?text=No+Image" alt="thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/400x225?text=News'">
                     </div>
-                    <a href="https://www.ithome.com.tw/news/174797" target="_blank" class="text-xl font-bold text-slate-800 hover:text-blue-600 transition-colors">
-                        【資安日報】3月31日，駭客組織ShinyHunters聲稱入侵歐盟AWS帳號並竊取資料
-                    </a>
-                    <p class="mt-2 text-slate-600 text-sm line-clamp-2">
-                        歐盟AWS帳號遭駭，駭客組織ShinyHunters聲稱是他們所為...
-                    </p>
-                </div>
-                
-                <div class="news-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded">iThome</span>
-                        <span class="text-slate-400 text-xs">2026-03-31  01:03:48</span>
+                    <div class="space-y-1">
+                        <a href="https://techcrunch.com/2026/03/30/allbirds-is-selling-for-39-million-it-raised-nearly-10-times-that-amount-in-its-ipo/" target="_blank" class="block text-slate-800 font-bold leading-snug hover:text-green-600 transition-colors line-clamp-2">
+                            Allbirds is selling for $39 million. It raised nearly 10 times that amount in its IPO.
+                        </a>
+                        <p class="text-slate-500 text-xs leading-relaxed">The collapse of the brand, which was original...</p>
                     </div>
-                    <a href="https://www.ithome.com.tw/news/174795" target="_blank" class="text-xl font-bold text-slate-800 hover:text-blue-600 transition-colors">
-                        Midjourney工程師開源Pretext，以純算術突破網頁文字排版長年效能瓶頸
-                    </a>
-                    <p class="mt-2 text-slate-600 text-sm line-clamp-2">
-                        曾是React核心貢獻者、現任Midjourney工程師Cheng Lou開源Pretext，這是一個以純TypeScript實作的文字排版引擎，能在完全不觸及DOM的情況下，以算術運算完成多行文字的...
-                    </p>
                 </div>
+                <hr class="border-slate-50">
                 
-                <div class="news-card bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded">iThome</span>
-                        <span class="text-slate-400 text-xs">2026-03-31  12:03:14</span>
+                <div class="group flex flex-col space-y-2">
+                    <div class="overflow-hidden rounded-xl bg-slate-100 aspect-video">
+                        <img src="https://via.placeholder.com/400x225?text=No+Image" alt="thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/400x225?text=News'">
                     </div>
-                    <a href="https://www.ithome.com.tw/news/174796" target="_blank" class="text-xl font-bold text-slate-800 hover:text-blue-600 transition-colors">
-                        駭客鎖定企業雲端環境的初始入侵手法大洗牌，語音網釣居冠
-                    </a>
-                    <p class="mt-2 text-slate-600 text-sm line-clamp-2">
-                        隨著企業上雲漸趨普及，雲端環境亦成為駭客攻擊的首要目標之一，根據Google最新發布的M-Trends 2026報告顯示，以全球態勢而言，攻...
-                    </p>
+                    <div class="space-y-1">
+                        <a href="https://techcrunch.com/2026/03/30/ai-work-boss-supervisor-us-quinnipiac-poll/" target="_blank" class="block text-slate-800 font-bold leading-snug hover:text-green-600 transition-colors line-clamp-2">
+                            15% of Americans say they’d be willing to work for an AI boss, according to new poll
+                        </a>
+                        <p class="text-slate-500 text-xs leading-relaxed">According to a Quinnipiac University poll, 15...</p>
+                    </div>
                 </div>
+                <hr class="border-slate-50">
                 
+                <div class="group flex flex-col space-y-2">
+                    <div class="overflow-hidden rounded-xl bg-slate-100 aspect-video">
+                        <img src="https://via.placeholder.com/400x225?text=No+Image" alt="thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/400x225?text=News'">
+                    </div>
+                    <div class="space-y-1">
+                        <a href="https://techcrunch.com/2026/03/30/popular-ai-gateway-startup-litellm-ditches-controversial-startup-delve/" target="_blank" class="block text-slate-800 font-bold leading-snug hover:text-green-600 transition-colors line-clamp-2">
+                            Popular AI gateway startup LiteLLM ditches controversial startup Delve
+                        </a>
+                        <p class="text-slate-500 text-xs leading-relaxed">LiteLLM had obtained two security compliance ...</p>
+                    </div>
+                </div>
+                <hr class="border-slate-50">
+                
+                <div class="group flex flex-col space-y-2">
+                    <div class="overflow-hidden rounded-xl bg-slate-100 aspect-video">
+                        <img src="https://via.placeholder.com/400x225?text=No+Image" alt="thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/400x225?text=News'">
+                    </div>
+                    <div class="space-y-1">
+                        <a href="https://techcrunch.com/2026/03/30/former-coatue-partner-raises-huge-65m-seed-for-enterprise-ai-agent-startup/" target="_blank" class="block text-slate-800 font-bold leading-snug hover:text-green-600 transition-colors line-clamp-2">
+                            Former Coatue partner raises huge $65M seed for enterprise AI agent startup
+                        </a>
+                        <p class="text-slate-500 text-xs leading-relaxed">A few things turned investors' heads and drew...</p>
+                    </div>
+                </div>
+                <hr class="border-slate-50">
+                
+                <div class="group flex flex-col space-y-2">
+                    <div class="overflow-hidden rounded-xl bg-slate-100 aspect-video">
+                        <img src="https://via.placeholder.com/400x225?text=No+Image" alt="thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/400x225?text=News'">
+                    </div>
+                    <div class="space-y-1">
+                        <a href="https://techcrunch.com/2026/03/30/ai-trust-adoption-poll-more-americans-adopt-tools-fewer-say-they-can-trust-the-results/" target="_blank" class="block text-slate-800 font-bold leading-snug hover:text-green-600 transition-colors line-clamp-2">
+                            As more Americans adopt AI tools, fewer say they can trust the results
+                        </a>
+                        <p class="text-slate-500 text-xs leading-relaxed">AI adoption is rising in the U.S., but trust ...</p>
+                    </div>
+                </div>
+                <hr class="border-slate-50">
+                </div></div><div class="flex flex-col h-full bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden"><div class="bg-orange-600 p-4 shadow-inner text-center font-black text-white tracking-widest uppercase">PanSci 泛科學</div><div class="p-4 flex-1 space-y-6 overflow-y-auto">
+                <div class="group flex flex-col space-y-2">
+                    <div class="overflow-hidden rounded-xl bg-slate-100 aspect-video">
+                        <img src="https://via.placeholder.com/400x225?text=No+Image" alt="thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/400x225?text=News'">
+                    </div>
+                    <div class="space-y-1">
+                        <a href="https://pansci.asia/archives/380859" target="_blank" class="block text-slate-800 font-bold leading-snug hover:text-orange-600 transition-colors line-clamp-2">
+                            春季流感別當小感冒！高燒不退恐重症，專家示警：吃錯藥當心養出「超級細菌」
+                        </a>
+                        <p class="text-slate-500 text-xs leading-relaxed">春季流感別當小感冒！若有持續高燒、呼吸困難等重症警訊應盡速就醫。專家提醒，流感需以抗病毒藥...</p>
+                    </div>
+                </div>
+                <hr class="border-slate-50">
+                
+                <div class="group flex flex-col space-y-2">
+                    <div class="overflow-hidden rounded-xl bg-slate-100 aspect-video">
+                        <img src="https://via.placeholder.com/400x225?text=No+Image" alt="thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/400x225?text=News'">
+                    </div>
+                    <div class="space-y-1">
+                        <a href="https://pansci.asia/archives/381021" target="_blank" class="block text-slate-800 font-bold leading-snug hover:text-orange-600 transition-colors line-clamp-2">
+                            這不只是一場比賽，更是一個讓想法化為行動的機會
+                        </a>
+                        <p class="text-slate-500 text-xs leading-relaxed">本文為 新北市青年局 廣告 從 NPO 題目出發，學生如何把提案帶進真實世界 如果一個比賽...</p>
+                    </div>
+                </div>
+                <hr class="border-slate-50">
+                
+                <div class="group flex flex-col space-y-2">
+                    <div class="overflow-hidden rounded-xl bg-slate-100 aspect-video">
+                        <img src="https://via.placeholder.com/400x225?text=No+Image" alt="thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/400x225?text=News'">
+                    </div>
+                    <div class="space-y-1">
+                        <a href="https://pansci.asia/archives/380835" target="_blank" class="block text-slate-800 font-bold leading-snug hover:text-orange-600 transition-colors line-clamp-2">
+                            近視族福音？不動刀、無傷口的「飛秒振盪器」視力矯正技術走到哪了？【挺健康】
+                        </a>
+                        <p class="text-slate-500 text-xs leading-relaxed">還記得 2018 年曾轟動一時的新聞嗎？當時各大媒體紛紛報導，美國哥倫比亞大學團隊研發出一...</p>
+                    </div>
+                </div>
+                <hr class="border-slate-50">
+                
+                <div class="group flex flex-col space-y-2">
+                    <div class="overflow-hidden rounded-xl bg-slate-100 aspect-video">
+                        <img src="https://via.placeholder.com/400x225?text=No+Image" alt="thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/400x225?text=News'">
+                    </div>
+                    <div class="space-y-1">
+                        <a href="https://pansci.asia/archives/380833" target="_blank" class="block text-slate-800 font-bold leading-snug hover:text-orange-600 transition-colors line-clamp-2">
+                            半夜痛醒像踩到玻璃？20 到 40 歲痛風大爆發，未來 5 年新武器將顛覆治療！【挺健康】
+                        </a>
+                        <p class="text-slate-500 text-xs leading-relaxed">你以為痛風是中年大叔的專利嗎？根據 2024 年最新的健保資料顯示，近年來 20 到 40...</p>
+                    </div>
+                </div>
+                <hr class="border-slate-50">
+                
+                <div class="group flex flex-col space-y-2">
+                    <div class="overflow-hidden rounded-xl bg-slate-100 aspect-video">
+                        <img src="https://via.placeholder.com/400x225?text=No+Image" alt="thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/400x225?text=News'">
+                    </div>
+                    <div class="space-y-1">
+                        <a href="https://pansci.asia/archives/380714" target="_blank" class="block text-slate-800 font-bold leading-snug hover:text-orange-600 transition-colors line-clamp-2">
+                            手術前就開始免疫治療？局部晚期頭頸癌的新策略，讓治療目標從「延命」變成「治癒」
+                        </a>
+                        <p class="text-slate-500 text-xs leading-relaxed">「圍手術期免疫治療」是局部晚期頭頸癌的治療趨勢，可望將治療目標從「延長存活」進一步調整為「...</p>
+                    </div>
+                </div>
+                <hr class="border-slate-50">
+                
+                <div class="group flex flex-col space-y-2">
+                    <div class="overflow-hidden rounded-xl bg-slate-100 aspect-video">
+                        <img src="https://via.placeholder.com/400x225?text=No+Image" alt="thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/400x225?text=News'">
+                    </div>
+                    <div class="space-y-1">
+                        <a href="https://pansci.asia/archives/380701" target="_blank" class="block text-slate-800 font-bold leading-snug hover:text-orange-600 transition-colors line-clamp-2">
+                            一站起就頭暈？醫師解析腎性貧血注射與口服治療全攻略
+                        </a>
+                        <p class="text-slate-500 text-xs leading-relaxed">腎臟會製造一種叫『紅血球生成素』（EPO）的物質。腎臟衰竭的病人常會因為紅血球生成素分泌減...</p>
+                    </div>
+                </div>
+                <hr class="border-slate-50">
+                </div></div><div class="flex flex-col h-full bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden"><div class="bg-red-600 p-4 shadow-inner text-center font-black text-white tracking-widest uppercase">iThome 新聞</div><div class="p-4 flex-1 space-y-6 overflow-y-auto">
+                <div class="group flex flex-col space-y-2">
+                    <div class="overflow-hidden rounded-xl bg-slate-100 aspect-video">
+                        <img src="https://via.placeholder.com/400x225?text=No+Image" alt="thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/400x225?text=News'">
+                    </div>
+                    <div class="space-y-1">
+                        <a href="https://www.ithome.com.tw/news/174801" target="_blank" class="block text-slate-800 font-bold leading-snug hover:text-red-600 transition-colors line-clamp-2">
+                            研究人員指Google Authenticator Passkey運作架構存在安全漏洞
+                        </a>
+                        <p class="text-slate-500 text-xs leading-relaxed">資安廠商Palo Alto分析Google Authenticator的Passkey（通...</p>
+                    </div>
+                </div>
+                <hr class="border-slate-50">
+                
+                <div class="group flex flex-col space-y-2">
+                    <div class="overflow-hidden rounded-xl bg-slate-100 aspect-video">
+                        <img src="https://via.placeholder.com/400x225?text=No+Image" alt="thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/400x225?text=News'">
+                    </div>
+                    <div class="space-y-1">
+                        <a href="https://www.ithome.com.tw/news/174800" target="_blank" class="block text-slate-800 font-bold leading-snug hover:text-red-600 transition-colors line-clamp-2">
+                            Uber收購Blacklane，強化商務用車服務布局
+                        </a>
+                        <p class="text-slate-500 text-xs leading-relaxed">德國禮賓車服務業者Blacklane與Uber週一（3/30）宣布雙方已達成收購協議，Ub...</p>
+                    </div>
+                </div>
+                <hr class="border-slate-50">
+                
+                <div class="group flex flex-col space-y-2">
+                    <div class="overflow-hidden rounded-xl bg-slate-100 aspect-video">
+                        <img src="https://via.placeholder.com/400x225?text=No+Image" alt="thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/400x225?text=News'">
+                    </div>
+                    <div class="space-y-1">
+                        <a href="https://www.ithome.com.tw/news/174797" target="_blank" class="block text-slate-800 font-bold leading-snug hover:text-red-600 transition-colors line-clamp-2">
+                            【資安日報】3月31日，駭客組織ShinyHunters聲稱入侵歐盟AWS帳號並竊取資料
+                        </a>
+                        <p class="text-slate-500 text-xs leading-relaxed">歐盟AWS帳號遭駭，駭客組織ShinyHunters聲稱是他們所為...</p>
+                    </div>
+                </div>
+                <hr class="border-slate-50">
+                
+                <div class="group flex flex-col space-y-2">
+                    <div class="overflow-hidden rounded-xl bg-slate-100 aspect-video">
+                        <img src="https://via.placeholder.com/400x225?text=No+Image" alt="thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/400x225?text=News'">
+                    </div>
+                    <div class="space-y-1">
+                        <a href="https://www.ithome.com.tw/news/174795" target="_blank" class="block text-slate-800 font-bold leading-snug hover:text-red-600 transition-colors line-clamp-2">
+                            Midjourney工程師開源Pretext，以純算術突破網頁文字排版長年效能瓶頸
+                        </a>
+                        <p class="text-slate-500 text-xs leading-relaxed">曾是React核心貢獻者、現任Midjourney工程師Cheng Lou開源Pretex...</p>
+                    </div>
+                </div>
+                <hr class="border-slate-50">
+                
+                <div class="group flex flex-col space-y-2">
+                    <div class="overflow-hidden rounded-xl bg-slate-100 aspect-video">
+                        <img src="https://via.placeholder.com/400x225?text=No+Image" alt="thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/400x225?text=News'">
+                    </div>
+                    <div class="space-y-1">
+                        <a href="https://www.ithome.com.tw/news/174796" target="_blank" class="block text-slate-800 font-bold leading-snug hover:text-red-600 transition-colors line-clamp-2">
+                            駭客鎖定企業雲端環境的初始入侵手法大洗牌，語音網釣居冠
+                        </a>
+                        <p class="text-slate-500 text-xs leading-relaxed">隨著企業上雲漸趨普及，雲端環境亦成為駭客攻擊的首要目標之一，根據Google最新發布的M-...</p>
+                    </div>
+                </div>
+                <hr class="border-slate-50">
+                
+                <div class="group flex flex-col space-y-2">
+                    <div class="overflow-hidden rounded-xl bg-slate-100 aspect-video">
+                        <img src="https://via.placeholder.com/400x225?text=No+Image" alt="thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/400x225?text=News'">
+                    </div>
+                    <div class="space-y-1">
+                        <a href="https://www.ithome.com.tw/news/174794" target="_blank" class="block text-slate-800 font-bold leading-snug hover:text-red-600 transition-colors line-clamp-2">
+                            語音網釣威脅在2025年竄升，成為初始入侵第二常見途徑
+                        </a>
+                        <p class="text-slate-500 text-xs leading-relaxed">語音網釣（vishing）威脅在2025年顯著升溫，成為全球資安圈高度關注的焦點。...</p>
+                    </div>
+                </div>
+                <hr class="border-slate-50">
+                </div></div>
+            </div>
+
+            <footer class="mt-20 text-center border-t border-slate-200 pt-10 text-slate-400 text-sm">
+                <div class="flex justify-center gap-6 mb-4">
+                    <div class="flex items-center gap-2"><span class="w-3 h-3 bg-blue-600 rounded-full"></span> TechNews</div>
+                    <div class="flex items-center gap-2"><span class="w-3 h-3 bg-green-600 rounded-full"></span> TechCrunch</div>
+                    <div class="flex items-center gap-2"><span class="w-3 h-3 bg-orange-600 rounded-full"></span> PanSci</div>
+                    <div class="flex items-center gap-2"><span class="w-3 h-3 bg-red-600 rounded-full"></span> iThome</div>
+                </div>
+                <p>© 2026 科技新聞自動化計畫 | 由 GitHub Actions & Python 驅動</p>
+            </footer>
         </div>
-        <footer class="mt-12 text-center text-slate-400 text-sm">
-            <p>© 2026 科技新聞自動化計畫 | 由 GitHub Actions & Python 驅動</p>
-        </footer>
-    </div>
-</body>
-</html>
+    </body>
+    </html>
+    
