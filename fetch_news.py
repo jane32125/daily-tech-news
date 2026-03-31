@@ -95,7 +95,7 @@ def main():
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>科技資訊監測站 2x2</title>
+        <title>每日科技新聞</title>
         <script src="https://cdn.tailwindcss.com"></script>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&family=Noto+Sans+TC:wght@400;700;900&display=swap');
@@ -114,8 +114,8 @@ def main():
         <div class="max-w-[1200px] mx-auto">
             <header class="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
                 <div class="text-center md:text-left">
-                    <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight">TECH <span class="text-blue-600">HUB</span> 2x2</h1>
-                    <p class="text-slate-500 font-medium">精選科技情報監測儀表板</p>
+                    <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight">每日科技新聞</h1>
+                    <p class="text-slate-500 font-medium">精選科技情報</p>
                 </div>
                 <div class="bg-white/80 backdrop-blur-sm px-6 py-3 rounded-2xl shadow-sm border border-slate-200 text-right">
                     <p class="text-[10px] text-slate-400 font-black uppercase tracking-widest mb-1">Last Updated</p>
